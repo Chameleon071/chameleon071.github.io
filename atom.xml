@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chameleon071.github.io</id>
     <title>Secuirty Dog</title>
-    <updated>2021-02-22T05:14:52.626Z</updated>
+    <updated>2021-02-22T05:22:00.426Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chameleon071.github.io"/>
     <link rel="self" href="https://chameleon071.github.io/atom.xml"/>
@@ -17,7 +17,8 @@
         <link href="https://chameleon071.github.io/post/ubuntu-mirror-switch/">
         </link>
         <updated>2021-02-22T04:45:15.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-bash"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+        <content type="html"><![CDATA[<p>edit:etc/apt/sources.list</p>
+<pre><code class="language-bash"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
