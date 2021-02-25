@@ -1,0 +1,216 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linux 两台服务器连接 | Secuirty Dog</title>
+<link rel="shortcut icon" href="https://chameleon071.github.io/favicon.ico?v=1614251426277">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://chameleon071.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Linux 两台服务器连接 | Secuirty Dog - Atom Feed" href="https://chameleon071.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="generate ssh-key &amp;ssh-key setting:
+$ ssh-keygen -t rsa -C &quot;name&quot;
+
+this command will generate id_rsaandid_r..." />
+    <meta name="keywords" content="SSH" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://chameleon071.github.io">
+  <img class="avatar" src="https://chameleon071.github.io/images/avatar.png?v=1614251426277" alt="">
+  </a>
+  <h1 class="site-title">
+    Secuirty Dog
+  </h1>
+  <p class="site-description">
+    What's happened,happened.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/archives" class="menu">
+          ARCHIVES
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          TAGS
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          ABOUT
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Linux 两台服务器连接
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-02-25
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://chameleon071.github.io/vkRnG4Nm3/" class="post-tag">
+                  # SSH
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p><strong>generate ssh-key &amp;ssh-key setting:</strong></p>
+<pre><code class="language-bash">$ ssh-keygen -t rsa -C &quot;name&quot;
+</code></pre>
+<p>this command will generate <code>id_rsa</code>and<code>id_rsa.pub</code> in local computer's <code>~/.ssh</code> file.</p>
+<p><code>id_rsa</code> &gt;&gt; local:<code>~/.ssh</code></p>
+<p><code>id_rsa.pub</code> &gt;&gt; remote: <code>~/.ssh/authorized_keys</code></p>
+<p>!!in the remote computer,<code>.ssh</code>and<code>authorized_keys</code>need authority 700(wrx),or it will invalid.!!</p>
+<pre><code class="language-bash">$ chmod -R 700 ~/.ssh/
+$ chmod 600 ~/.ssh/authorized_keys
+</code></pre>
+<p>ssh-key setting tips :</p>
+<pre><code class="language-bash">$ vim /etc/ssh/sshd_config
+
+# root account login,it's not necessary,in order to security,please set it.
+PermitRootLogin no
+
+# sshd open folder permission
+StrictModes no
+
+# user ssh-key login permission
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile %h/.ssh/authorized_keys
+
+# user password login permission
+PasswordAuthentication no
+</code></pre>
+<p><strong>scp transmit file and folder between two linuxOS:</strong></p>
+<p><strong>copy file:</strong></p>
+<ul>
+<li>local_file &gt;&gt; remote_file</li>
+</ul>
+<pre><code class="language-bash">scp local_file remote_username@remoteuser_ip:remote_foler:remote
+</code></pre>
+<ul>
+<li>remote_file &gt;&gt; local_file</li>
+</ul>
+<pre><code class="language-bash">scp remote_username@remore_ip:remote_file local_filepath
+</code></pre>
+<p><strong>copy folder:</strong></p>
+<ul>
+<li>local_folder &gt;&gt; remote_folder</li>
+</ul>
+<pre><code class="language-bash">scp -r local_folder remote_username@remote_ip:remote_path
+</code></pre>
+<ul>
+<li>remote_folder &gt;&gt; local_folder</li>
+</ul>
+<pre><code class="language-bash">scp -r remote_ip:remote_folder local_path
+</code></pre>
+<p>different between file and folder transmission:transmission folder need to carry parameter <code>-r</code></p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://chameleon071.github.io/media-change-please-insert-the-disc-labeled/">
+              <h3 class="post-title">
+                Media Change Please Insert The Disc Labeled
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="https://chameleon071.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

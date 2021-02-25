@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chameleon071.github.io</id>
     <title>Secuirty Dog</title>
-    <updated>2021-02-25T11:03:45.528Z</updated>
+    <updated>2021-02-25T11:13:54.536Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chameleon071.github.io"/>
     <link rel="self" href="https://chameleon071.github.io/atom.xml"/>
@@ -11,22 +11,9 @@
     <icon>https://chameleon071.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Secuirty Dog</rights>
     <entry>
-        <title type="html"><![CDATA[About]]></title>
-        <id>https://chameleon071.github.io/post/about/</id>
-        <link href="https://chameleon071.github.io/post/about/">
-        </link>
-        <updated>2021-02-25T10:58:08.000Z</updated>
-        <content type="html"><![CDATA[<br>
-<center>一只菜鸡，渴望变强。</center>
-<br>
-<center>
-<a href="https://github.com/Chameleon071">Github-Chameleon07</a>
-</center>]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Linux 两台服务器连接]]></title>
-        <id>https://chameleon071.github.io/post/linux-liang-tai-fu-wu-qi-lian-jie/</id>
-        <link href="https://chameleon071.github.io/post/linux-liang-tai-fu-wu-qi-lian-jie/">
+        <id>https://chameleon071.github.io/linux-liang-tai-fu-wu-qi-lian-jie/</id>
+        <link href="https://chameleon071.github.io/linux-liang-tai-fu-wu-qi-lian-jie/">
         </link>
         <updated>2021-02-25T10:47:25.000Z</updated>
         <content type="html"><![CDATA[<p><strong>generate ssh-key &amp;ssh-key setting:</strong></p>
@@ -84,8 +71,8 @@ PasswordAuthentication no
     </entry>
     <entry>
         <title type="html"><![CDATA[Media Change Please Insert The Disc Labeled]]></title>
-        <id>https://chameleon071.github.io/post/media-change-please-insert-the-disc-labeled/</id>
-        <link href="https://chameleon071.github.io/post/media-change-please-insert-the-disc-labeled/">
+        <id>https://chameleon071.github.io/media-change-please-insert-the-disc-labeled/</id>
+        <link href="https://chameleon071.github.io/media-change-please-insert-the-disc-labeled/">
         </link>
         <updated>2021-02-25T10:45:41.000Z</updated>
         <content type="html"><![CDATA[<p><strong>BUG</strong><br>
@@ -96,8 +83,8 @@ vim /etc/apt/sources.list,annotate cdrom line.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Git指令]]></title>
-        <id>https://chameleon071.github.io/post/git-zhi-ling/</id>
-        <link href="https://chameleon071.github.io/post/git-zhi-ling/">
+        <id>https://chameleon071.github.io/git-zhi-ling/</id>
+        <link href="https://chameleon071.github.io/git-zhi-ling/">
         </link>
         <updated>2021-02-25T10:43:10.000Z</updated>
         <content type="html"><![CDATA[<pre><code class="language-git">**CONFIG**
@@ -142,8 +129,8 @@ pit push origin master
     </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu源镜像切换]]></title>
-        <id>https://chameleon071.github.io/post/ubuntu-mirror-switch/</id>
-        <link href="https://chameleon071.github.io/post/ubuntu-mirror-switch/">
+        <id>https://chameleon071.github.io/ubuntu-mirror-switch/</id>
+        <link href="https://chameleon071.github.io/ubuntu-mirror-switch/">
         </link>
         <updated>2021-02-22T04:45:15.000Z</updated>
         <content type="html"><![CDATA[<p>Edit:etc/apt/sources.list</p>
