@@ -1,45 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chameleon071.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-02-22T03:36:30.376Z</updated>
+    <title>Secuirty Dog</title>
+    <updated>2021-02-25T12:37:24.530Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chameleon071.github.io"/>
     <link rel="self" href="https://chameleon071.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>What&apos;s happened,happened.</subtitle>
     <logo>https://chameleon071.github.io/images/avatar.png</logo>
     <icon>https://chameleon071.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, Secuirty Dog</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://chameleon071.github.io/post/hello-gridea/</id>
-        <link href="https://chameleon071.github.io/post/hello-gridea/">
+        <title type="html"><![CDATA[SSR中文搭建服务端]]></title>
+        <id>https://chameleon071.github.io/ssr-zhong-wen-da-jian-fu-wu-duan/</id>
+        <link href="https://chameleon071.github.io/ssr-zhong-wen-da-jian-fu-wu-duan/">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2021-02-25T12:06:26.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>服务器</strong></p>
+<pre><code class="language-bash">wget -N --no-check-certificate https://makeai.cn/bash/ssrmu.sh &amp;&amp; chmod +x ssrmu.sh &amp;&amp; bash ssrmu.sh
+
+bash ssrmu.sh#运行
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux 两台服务器连接]]></title>
+        <id>https://chameleon071.github.io/linux-liang-tai-fu-wu-qi-lian-jie/</id>
+        <link href="https://chameleon071.github.io/linux-liang-tai-fu-wu-qi-lian-jie/">
+        </link>
+        <updated>2021-02-25T10:47:25.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>generate ssh-key &amp;ssh-key setting:</strong></p>
+<pre><code class="language-bash">$ ssh-keygen -t rsa -C &quot;name&quot;
+</code></pre>
+<p>this command will generate <code>id_rsa</code>and<code>id_rsa.pub</code> in local computer's <code>~/.ssh</code> file.</p>
+<p><code>id_rsa</code> &gt;&gt; local:<code>~/.ssh</code></p>
+<p><code>id_rsa.pub</code> &gt;&gt; remote: <code>~/.ssh/authorized_keys</code></p>
+<p>!!in the remote computer,<code>.ssh</code>and<code>authorized_keys</code>need authority 700(wrx),or it will invalid.!!</p>
+<pre><code class="language-bash">$ chmod -R 700 ~/.ssh/
+$ chmod 600 ~/.ssh/authorized_keys
+</code></pre>
+<p>ssh-key setting tips :</p>
+<pre><code class="language-bash">$ vim /etc/ssh/sshd_config
+
+# root account login,it's not necessary,in order to security,please set it.
+PermitRootLogin no
+
+# sshd open folder permission
+StrictModes no
+
+# user ssh-key login permission
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile %h/.ssh/authorized_keys
+
+# user password login permission
+PasswordAuthentication no
+</code></pre>
+<p><strong>scp transmit file and folder between two linuxOS:</strong></p>
+<p><strong>copy file:</strong></p>
+<ul>
+<li>local_file &gt;&gt; remote_file</li>
+</ul>
+<pre><code class="language-bash">scp local_file remote_username@remoteuser_ip:remote_foler:remote
+</code></pre>
+<ul>
+<li>remote_file &gt;&gt; local_file</li>
+</ul>
+<pre><code class="language-bash">scp remote_username@remore_ip:remote_file local_filepath
+</code></pre>
+<p><strong>copy folder:</strong></p>
+<ul>
+<li>local_folder &gt;&gt; remote_folder</li>
+</ul>
+<pre><code class="language-bash">scp -r local_folder remote_username@remote_ip:remote_path
+</code></pre>
+<ul>
+<li>remote_folder &gt;&gt; local_folder</li>
+</ul>
+<pre><code class="language-bash">scp -r remote_ip:remote_folder local_path
+</code></pre>
+<p>different between file and folder transmission:transmission folder need to carry parameter <code>-r</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Media Change Please Insert The Disc Labeled]]></title>
+        <id>https://chameleon071.github.io/media-change-please-insert-the-disc-labeled/</id>
+        <link href="https://chameleon071.github.io/media-change-please-insert-the-disc-labeled/">
+        </link>
+        <updated>2021-02-25T10:45:41.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>BUG</strong><br>
+use I use ubuntu 18.04 server apt function,CLI shows that &quot;Media change: please insert the disc labeled.&quot;<br>
+<strong>DEBUG:</strong><br>
+vim /etc/apt/sources.list,annotate cdrom line.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git指令]]></title>
+        <id>https://chameleon071.github.io/git-zhi-ling/</id>
+        <link href="https://chameleon071.github.io/git-zhi-ling/">
+        </link>
+        <updated>2021-02-25T10:43:10.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-git">**CONFIG**
+git config local --email &quot;username@email.com&quot;
+git config local --name &quot;register_username&quot;
+#setting email and name
+
+git config user.email
+git config user.name
+#check the setting of email and name
+
+**BRANCH**
+git remote update origin --prune
+#check out branch and delete old branch
+git branch -a
+#check all local branch
+git branch
+#check branch at present
+git checkout -b master origin/master
+#switch a new branch
+git branch testing
+#create new branch named testing
+git branch -d testing
+#delete testing
+git merge testing
+#merge master and testing
+
+**INIT**
+git init
+#add .init folder into your target folder
+git remote add origin http://github.com/chameleon07.git
+#set remote repository 
+#if you run error about &quot;remote origin already exists&quot;,you can try:
+git remote set-url origin git@github.com:Chameleon00007/chameleon00007.github.io.git
+git status 
+#check git status
+git add .
+git commit -m &quot;commit&quot;
+pit push origin master
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu源镜像切换]]></title>
+        <id>https://chameleon071.github.io/ubuntu-mirror-switch/</id>
+        <link href="https://chameleon071.github.io/ubuntu-mirror-switch/">
+        </link>
+        <updated>2021-02-22T04:45:15.000Z</updated>
+        <content type="html"><![CDATA[<p>Edit:etc/apt/sources.list</p>
+<pre><code class="language-bash"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+
+</code></pre>
 ]]></content>
     </entry>
 </feed>
