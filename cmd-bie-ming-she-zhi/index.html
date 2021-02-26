@@ -2,19 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Anaconda操作指南 | Secuirty Dog</title>
+<title>Cmd别名设置 | Secuirty Dog</title>
 <link rel="shortcut icon" href="https://chameleon071.github.io/favicon.ico?v=1614318010249">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://chameleon071.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Anaconda操作指南 | Secuirty Dog - Atom Feed" href="https://chameleon071.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Cmd别名设置 | Secuirty Dog - Atom Feed" href="https://chameleon071.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="conda list：查看安装了哪些包
-conda env list：查看安装了哪些环境
-conda update conda：检查更新当前conda
-conda create -n your_env_name python=X.X：创建c..." />
+    <meta name="description" content="1.创建文件
+C:\cmd-alias.bat
+doskey sayhello=echo Hello $*
+doskey cattxt=type xxxxxxxxxxxx.txt $*
+@doskey ls=dir /b $*
+@doske..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -71,7 +73,7 @@ conda create -n your_env_name python=X.X：创建c..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Anaconda操作指南
+              Cmd别名设置
             </h2>
             <div class="post-info">
               <span>
@@ -85,14 +87,20 @@ conda create -n your_env_name python=X.X：创建c..." />
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>conda list：查看安装了哪些包<br>
-conda env list：查看安装了哪些环境<br>
-conda update conda：检查更新当前conda<br>
-conda create -n your_env_name python=X.X：创建conda环境<br>
-activate your_env_name：激活环境<br>
-conda remove -n your_env_name(虚拟环境名称) --all:删除环境（base不行）<br>
-conda remove --name your_env_name  package_name：删除环境中的某个包<br>
-deactivate：脱离环境</p>
+                <p><strong>1.创建文件</strong><br>
+C:\cmd-alias.bat</p>
+<pre><code class="language-bat">doskey sayhello=echo Hello $*
+doskey cattxt=type xxxxxxxxxxxx.txt $*
+@doskey ls=dir /b $*
+@doskey l=dir /od/p/q/tw $*
+</code></pre>
+<p><strong>2.解释</strong><br>
+doskey就相当于Linux中的alias，<br>
+$*表示这个命令还可能有其他参数，<br>
+@表示执行这条命令时不显示这条命令本身<br>
+第二个命令type xxxxxxxxxxxx.txt的作用是读取txt文件内容并打印到屏幕，等同于Linux下的cat</p>
+<p><strong>3.注册表设置</strong><br>
+使用Win+R，输入regedit进入注册表，找到HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor，右键新建，字符串值，名为AutoRun，值为C:\cmd-alias.bat，保存退出。</p>
 
               </div>
               <div class="toc-container">
@@ -105,9 +113,9 @@ deactivate：脱离环境</p>
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://chameleon071.github.io/ssr-zhong-wen-da-jian-fu-wu-duan/">
+            <a href="https://chameleon071.github.io/anaconda-cao-zuo-zhi-nan/">
               <h3 class="post-title">
-                SSR中文搭建服务端
+                Anaconda操作指南
               </h3>
             </a>
           </div>

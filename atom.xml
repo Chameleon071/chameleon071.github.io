@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chameleon071.github.io</id>
     <title>Secuirty Dog</title>
-    <updated>2021-02-26T03:08:53.354Z</updated>
+    <updated>2021-02-26T05:40:13.395Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chameleon071.github.io"/>
     <link rel="self" href="https://chameleon071.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://chameleon071.github.io/images/avatar.png</logo>
     <icon>https://chameleon071.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Secuirty Dog</rights>
+    <entry>
+        <title type="html"><![CDATA[Cmd别名设置]]></title>
+        <id>https://chameleon071.github.io/cmd-bie-ming-she-zhi/</id>
+        <link href="https://chameleon071.github.io/cmd-bie-ming-she-zhi/">
+        </link>
+        <updated>2021-02-26T05:35:36.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>1.创建文件</strong><br>
+C:\cmd-alias.bat</p>
+<pre><code class="language-bat">doskey sayhello=echo Hello $*
+doskey cattxt=type xxxxxxxxxxxx.txt $*
+@doskey ls=dir /b $*
+@doskey l=dir /od/p/q/tw $*
+</code></pre>
+<p><strong>2.解释</strong><br>
+doskey就相当于Linux中的alias，<br>
+$*表示这个命令还可能有其他参数，<br>
+@表示执行这条命令时不显示这条命令本身<br>
+第二个命令type xxxxxxxxxxxx.txt的作用是读取txt文件内容并打印到屏幕，等同于Linux下的cat</p>
+<p><strong>3.注册表设置</strong><br>
+使用Win+R，输入regedit进入注册表，找到HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor，右键新建，字符串值，名为AutoRun，值为C:\cmd-alias.bat，保存退出。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Anaconda操作指南]]></title>
         <id>https://chameleon071.github.io/anaconda-cao-zuo-zhi-nan/</id>
