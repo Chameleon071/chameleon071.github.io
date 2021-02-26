@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chameleon071.github.io</id>
     <title>Secuirty Dog</title>
-    <updated>2021-02-25T12:51:47.622Z</updated>
+    <updated>2021-02-26T03:07:45.497Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chameleon071.github.io"/>
     <link rel="self" href="https://chameleon071.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://chameleon071.github.io/images/avatar.png</logo>
     <icon>https://chameleon071.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Secuirty Dog</rights>
+    <entry>
+        <title type="html"><![CDATA[Anaconda操作指南]]></title>
+        <id>https://chameleon071.github.io/anaconda-cao-zuo-zhi-nan/</id>
+        <link href="https://chameleon071.github.io/anaconda-cao-zuo-zhi-nan/">
+        </link>
+        <updated>2021-02-26T02:49:07.000Z</updated>
+        <content type="html"><![CDATA[<p>conda list：查看安装了哪些包<br>
+conda env list：查看安装了哪些环境<br>
+conda update conda：检查更新当前conda<br>
+conda create -n your_env_name python=X.X：创建conda环境<br>
+activate your_env_name：激活环境<br>
+conda remove -n your_env_name(虚拟环境名称) --all:删除环境（base不行）<br>
+conda remove --name your_env_name  package_name：删除环境中的某个包<br>
+deactivate：脱离环境</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SSR中文搭建服务端]]></title>
         <id>https://chameleon071.github.io/ssr-zhong-wen-da-jian-fu-wu-duan/</id>

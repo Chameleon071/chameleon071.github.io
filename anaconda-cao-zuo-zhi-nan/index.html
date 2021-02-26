@@ -2,19 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Git指令 | Secuirty Dog</title>
+<title>Anaconda操作指南 | Secuirty Dog</title>
 <link rel="shortcut icon" href="https://chameleon071.github.io/favicon.ico?v=1614308856859">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://chameleon071.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Git指令 | Secuirty Dog - Atom Feed" href="https://chameleon071.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Anaconda操作指南 | Secuirty Dog - Atom Feed" href="https://chameleon071.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="**CONFIG**
-git config local --email &quot;username@email.com&quot;
-git config local --name &quot;register_username&quot;..." />
-    <meta name="keywords" content="GIT" />
+    <meta name="description" content="conda list：查看安装了哪些包
+conda env list：查看安装了哪些环境
+conda update conda：检查更新当前conda
+conda create -n your_env_name python=X.X：创建c..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -70,62 +71,28 @@ git config local --name &quot;register_username&quot;..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Git指令
+              Anaconda操作指南
             </h2>
             <div class="post-info">
               <span>
-                2021-02-25
+                2021-02-26
               </span>
               <span>
                 1 min read
               </span>
               
-                <a href="https://chameleon071.github.io/f9MrOCXDp/" class="post-tag">
-                  # GIT
-                </a>
-              
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <pre><code class="language-git">**CONFIG**
-git config local --email &quot;username@email.com&quot;
-git config local --name &quot;register_username&quot;
-#setting email and name
-
-git config user.email
-git config user.name
-#check the setting of email and name
-
-**BRANCH**
-git remote update origin --prune
-#check out branch and delete old branch
-git branch -a
-#check all local branch
-git branch
-#check branch at present
-git checkout -b master origin/master
-#switch a new branch
-git branch testing
-#create new branch named testing
-git branch -d testing
-#delete testing
-git merge testing
-#merge master and testing
-
-**INIT**
-git init
-#add .init folder into your target folder
-git remote add origin http://github.com/chameleon07.git
-#set remote repository 
-#if you run error about &quot;remote origin already exists&quot;,you can try:
-git remote set-url origin git@github.com:Chameleon00007/chameleon00007.github.io.git
-git status 
-#check git status
-git add .
-git commit -m &quot;commit&quot;
-pit push origin master
-</code></pre>
+                <p>conda list：查看安装了哪些包<br>
+conda env list：查看安装了哪些环境<br>
+conda update conda：检查更新当前conda<br>
+conda create -n your_env_name python=X.X：创建conda环境<br>
+activate your_env_name：激活环境<br>
+conda remove -n your_env_name(虚拟环境名称) --all:删除环境（base不行）<br>
+conda remove --name your_env_name  package_name：删除环境中的某个包<br>
+deactivate：脱离环境</p>
 
               </div>
               <div class="toc-container">
@@ -138,9 +105,9 @@ pit push origin master
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://chameleon071.github.io/ubuntu-mirror-switch/">
+            <a href="https://chameleon071.github.io/ssr-zhong-wen-da-jian-fu-wu-duan/">
               <h3 class="post-title">
-                Ubuntu源镜像切换
+                SSR中文搭建服务端
               </h3>
             </a>
           </div>
